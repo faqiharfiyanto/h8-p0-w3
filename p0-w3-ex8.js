@@ -1,4 +1,3 @@
-function pasanganTerbesar(num) {
 /*
     bikin nilai max =0
 ubah jadi string dulu
@@ -7,6 +6,8 @@ ubah jadi angka
 bandingin sama max
 */
 // var num = 123456
+
+function pasanganTerbesar(num) {
 var pasanganMax = 0
 var numString = num.toString()
 var testing = true

@@ -9,7 +9,7 @@ function angkaPalindrome(num) {
         for(var i = angkaString.length - 1; i >= 0; i--) {
             temp += angkaString[i]
             if(temp === angkaString) {
-                return temp
+                return Number(temp)
             }
             else {
                 num2 = false
