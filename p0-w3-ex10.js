@@ -1,15 +1,15 @@
 function perkalianUnik(arr) {
-  var result = []
-  for(var i = 0; i < arr.length; i++) {
-    var penampungKali = 1
-    for(var j = 0; j < arr.length; j++) {
-      if(i !== j) {
-        penampungKali *= arr[j]
+  var temp=[]
+  for(var i=0; i<arr.length; i++) {
+    var temp2=1
+    for(var j=0; j<arr.length; j++) {
+      if(i!=j) {
+        temp2*=arr[j]
       }
     }
-    result.push(penampungKali)
+    temp.push(temp2)
   }
-  return result
+  return temp
 }
 
 // TEST CASES

@@ -1,16 +1,14 @@
 function mengelompokkanAngka(arr) {
-    var result = [[], [], []]
-    var resultGenap = result[0]
-    var resultGanjil = result[1]
-    var resultKelipatan3 = result[2]
-    for(var i = 0; i < arr.length; i++) {
-        if(arr[i] % 2 === 0 && arr[i] % 3 !== 0) {
+    var result=[[],[],[]]
+    var resultGenap=result[0]
+    var resultGanjil=result[1]
+    var resultKelipatan3=result[2]
+    for(var i=0; i<arr.length; i++) {
+        if(arr[i]%2==0 && arr[i]%3!=0) {
             resultGenap.push(arr[i])
-        }
-        else if (arr[i] % 2 !== 0 && arr[i] % 3 !== 0) {
+        } else if (arr[i]%2!==0 && arr[i]%3!=0) {
             resultGanjil.push(arr[i])
-        }
-        else {
+        } else {
             resultKelipatan3.push(arr[i])
         }
     }

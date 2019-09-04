@@ -1,41 +1,39 @@
-//var arrayyy = ["0001", "Roman Alamsyah", "Bandar Lampung", "21/05/1989", "Membaca"]
-var result = ''
-// var splitTanggal = arrayyy[3].split('/')
-function dataHandling2(input) {
-    input.splice(1, 1, 'Roman Alamsyah Elsharawy')
-    input.splice(2, 1, 'Provinsi Bandar Lampung')
-    input.splice(4, 1, 'Pria', 'SMA Internasional Metro')
-    return input  
-}
-result = dataHandling2(["0001", "Roman Alamsyah", "Bandar Lampung", "21/05/1989", "Membaca"])
-var tanggalanBefore = result[3].split('/')
-var bulanBefore = tanggalanBefore[1]
-var bulanAfter = ''
-switch(bulanBefore) {
-    case '01': { bulanAfter = 'Januari'; break; }
-    case '02': { bulanAfter = 'Februari'; break; }
-    case '03': { bulanAfter = 'Maret'; break; }
-    case '04': { bulanAfter = 'April'; break; }
-    case '05': { bulanAfter = 'Mei'; break; }
-    case '06': { bulanAfter = 'Juni'; break; }
-    case '07': { bulanAfter = 'Juli'; break; }
-    case '08': { bulanAfter = 'Agustus'; break; }
-    case '09': { bulanAfter = 'September'; break; }
-    case '10': { bulanAfter = 'Oktober'; break; }
-    case '11': { bulanAfter = 'November'; break; }
-    case '12': { bulanAfter = 'Desember'; }
-}
-console.log(result) //oke
-console.log(bulanAfter) //oke
-// console.log(tanggalanBefore) // cuma patokan
-var tanggalanAngka = [Number(tanggalanBefore[0]), Number(tanggalanBefore[1]), Number(tanggalanBefore[2])]
-// console.log(tanggalanAngka) // cumapatokan
-tanggalanAngka.sort(function(value1, value2) { return value1 < value2 })
-// console.log(tanggalanAngka) //cuma patokan
-var tanggalanString = [tanggalanAngka[0].toString(), tanggalanAngka[1].toString(), ('0' + tanggalanAngka[2].toString()).slice(-2)]
-console.log(tanggalanString) // 50%
-var tanggalanStrip = tanggalanBefore.join('-')
-console.log(tanggalanStrip) // oke
+var input = ["0001", "Roman Alamsyah", "Bandar Lampung", "21/05/1989", "Membaca"];
 
-var namaOrang = result.slice(1, 2).toString()
-console.log(namaOrang) // oke
+function dataHandling2(a) {
+    a.splice(1,1,"Roman Alamsyah Elsharawy")
+    a.splice(2,1,"Provinsi Bandar Lampung")
+    a.splice(4,1,"Pria","SMA Internasional Metro")
+    console.log(a)
+    var tanggalan=a[3].split("/")
+    switch(tanggalan[1]) {
+        case '01': { console.log("Januari"); break; }
+        case '02': { console.log("Februari"); break; }
+        case '03': { console.log("Maret"); break; }
+        case '04': { console.log("April"); break; }
+        case '05': { console.log("Mei"); break; }
+        case '06': { console.log("Juni"); break; }
+        case '07': { console.log("Juli"); break; }
+        case '08': { console.log("Agustus"); break; }
+        case '09': { console.log("September"); break; }
+        case '10': { console.log("Oktober"); break; }
+        case '11': { console.log("November"); break; }
+        case '12': { console.log("Desember"); }
+    }
+    console.log(tanggalan.sort(function(aa,bb) {return aa<bb}))
+    var nama=a[1].slice(0,15)
+    console.log(nama)
+    return a
+}
+
+dataHandling2(input);
+
+/*
+ * keluaran yang diharapkan (pada console)
+ *
+ * ["0001", "Roman Alamsyah Elsharawy", "Provinsi Bandar Lampung", "21/05/1989", "Pria", "SMA Internasional Metro"]
+ * Mei
+ * ["1989", "21", "05"]
+ * 21-05-1989
+ * Roman Alamsyah
+ */

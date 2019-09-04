@@ -1,15 +1,11 @@
 function cariMean(arr) {
-    var tampung = 0
-    var result = 0
-    // rata2 = sum / arr.length
-    for( var i = 0; i < arr.length; i++) {
-        tampung += arr[i]
+    var temp=0
+    for(var i=0;i<arr.length;i++) {
+      temp+=arr[i]
     }
-    result = Math.round(tampung / arr.length)
-return result
-  
-}
-  
+    return Math.round(temp/arr.length)
+  }
+    
   // TEST CASES
   console.log(cariMean([1, 2, 3, 4, 5])); // 3
   console.log(cariMean([3, 5, 7, 5, 3])); // 5

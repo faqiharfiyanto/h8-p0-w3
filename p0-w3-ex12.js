@@ -1,14 +1,15 @@
 function tentukanDeretGeometri(arr) {
-    var penampung = Boolean
-    for(var i = 0; i < arr.length - 2; i++) {
-        if(arr[i + 1] / arr[i] === arr[i + 2] / arr[i + 1]) {
-            penampung = true
+    var temp=0
+    for(var i=0; i<arr.length-1; i++) {
+      for(var j=1; j<arr.length-2; j++ ) {
+        if(arr[i+1]/arr[i]==arr[j+1]/arr[j]) {
+          temp=true
+        } else {
+          return false
         }
-        else {
-            penampung = false
-        }
+      }
+      return temp
     }
-    return penampung
   }
   
   // TEST CASES
