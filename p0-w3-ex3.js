@@ -5,7 +5,7 @@ var input = [
     ["0004", "Bintang Senjaya", "Martapura", "6/4/1970", "Berkebun"]
 ]
 function dataHandling(a) {
-    for(var i=0; i<a.length; i++) {
+    for (var i=0; i<a.length; i++) {
         var result="Nomor ID: "+a[i][0]+"\n"+"Nama Lengkap: "+a[i][1]+"\n"+"TTL: "+a[i][2]+", "+a[i][3]+"\n"+"Hobi: "+a[i][4]+"\n"
         console.log(result)
     }

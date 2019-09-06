@@ -1,7 +1,7 @@
 var input = ["0001", "Roman Alamsyah", "Bandar Lampung", "21/05/1989", "Membaca"];
 
 function dataHandling2(a) {
-    a.splice(1,1,"Roman Alamsyah Elsharawy")
+    a.splice(1,1,"Roman Alamsyah Elsharawy",)
     a.splice(2,1,"Provinsi Bandar Lampung")
     a.splice(4,1,"Pria","SMA Internasional Metro")
     console.log(a)
@@ -20,10 +20,21 @@ function dataHandling2(a) {
         case '11': { console.log("November"); break; }
         case '12': { console.log("Desember"); }
     }
-    console.log(tanggalan.sort(function(aa,bb) {return aa<bb}))
+    // console.log(tanggalan.sort(function(aa,bb) {return aa<bb}))
+    var ngurutTgl = []
+    for (var i=0; i<tanggalan.length; i++) {
+        ngurutTgl.push(Number(tanggalan[i]))
+    }
+    ngurutTgl.sort()
+    var hasil = []
+    for (var i=0; i<tanggalan.length; i++) {
+        hasil.push(ngurutTgl[i].toString())
+    }
+    
+    console.log(hasil)
+    console.log(tanggalan.join('-'))
     var nama=a[1].slice(0,15)
     console.log(nama)
-    return a
 }
 
 dataHandling2(input);

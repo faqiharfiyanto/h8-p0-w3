@@ -1,14 +1,13 @@
 function angkaPalindrome(num) {
-    var temp1=true
-    while(temp1) {
+    while(true) {
         num++
-        var temp2=num.toString()
-        var temp3=""
-        for(var i=temp2.length-1; i>-1; i--) {
-            temp3+=temp2[i]
-            }
-        if(temp3==temp2) {
-                return num
+        var temp1=num.toString()
+        var temp2=''
+        for(var i=temp1.length-1; i>-1; i--) {
+            temp2+=temp1[i]
+        }
+        if(temp2==temp1) {
+            return num
         }
     }
 }

@@ -1,9 +1,9 @@
 function perkalianUnik(arr) {
   var temp=[]
-  for(var i=0; i<arr.length; i++) {
+  for (var i=0; i<arr.length; i++) {
     var temp2=1
-    for(var j=0; j<arr.length; j++) {
-      if(i!=j) {
+    for (var j=0; j<arr.length; j++) {
+      if (i!=j) {
         temp2*=arr[j]
       }
     }

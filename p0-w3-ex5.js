@@ -1,6 +1,6 @@
 function palindrome(kata) {
-    var temp=""
-    for(var i=kata.length-1; i>-1; i--) {
+    var temp=''
+    for(var i=kata.length-1; i>=0; i--) {
         temp+=kata[i]
     }
     if(temp==kata) {
