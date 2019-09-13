@@ -1,10 +1,10 @@
 function pasanganTerbesar(num) {
-    var num2=num.toString()
-    var max=0
+    var num2 = num.toString()
+    var max = 0
     for(var i=0; i<num2.length-1; i++) {
         var coupleStr=''
         coupleStr+=(num2[i]+num2[i+1])
-        var coupleNum =Number(coupleStr) 
+        var coupleNum = Number(coupleStr) 
         if(coupleNum>max) {
             max=coupleNum
         }
